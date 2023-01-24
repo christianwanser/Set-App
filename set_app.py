@@ -56,7 +56,10 @@ def main_page():
 #    st.markdown("**Click** on any data point and **you're brought to that post's link!**")
 
 
+    picture = st.camera_input("Take a picture")
 
+    if picture:
+        st.image(picture)
 
 
 def page2():
