@@ -22,7 +22,7 @@ import streamlit as st
 
 def main_page():
 
-#    col1, mid, col2 = st.columns([1,2,20])
+    col1, mid, col2 = st.columns([1,2,20])
 #    #with col1:
 #        #st.image(os.path.abspath("images/LI logo.png"),
 #            #width=100)
@@ -61,7 +61,7 @@ def main_page():
 
 def page2():
 
-#    col1, mid, col2 = st.columns([1,2,20])
+    col1, mid, col2 = st.columns([1,2,20])
 #    with col1:
 #        st.image(os.path.abspath("images/LI logo.png"),
 #            width=100)
@@ -377,7 +377,7 @@ def page2():
 
 def page3():
 
-#    col1, mid, col2 = st.columns([1,2,20])
+    col1, mid, col2 = st.columns([1,2,20])
 #    with col1:
 #        st.image(os.path.abspath("images/LI logo.png"),
 #            width=100)
