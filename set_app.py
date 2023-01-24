@@ -63,7 +63,7 @@ def main_page():
         st.image(input_image)
         
 
-    python solver_final.py --image input_image
+    solver_final.py --image input_image
 
 
 def page2():
