@@ -61,8 +61,8 @@ def main_page():
     if picture:
         st.image(picture)
         
-    #./solve_set.py [filename] --display
-    solve_set.py [picture] --display
+    
+    
 
 
 def page2():
