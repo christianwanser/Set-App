@@ -20,6 +20,7 @@ import streamlit as st
 #
 #import altair as alt
 
+
 def main_page():
 
     col1, mid, col2 = st.columns([1,2,20])
@@ -56,13 +57,13 @@ def main_page():
 #    st.markdown("**Click** on any data point and **you're brought to that post's link!**")
 
 
-    picture = st.camera_input("Take a picture")
+    input_image = st.camera_input("Take a picture")
 
-    if picture:
-        st.image(picture)
+    if input_image:
+        st.image(input_image)
         
-    
-    
+
+    python solver_final.py --image input_image
 
 
 def page2():
