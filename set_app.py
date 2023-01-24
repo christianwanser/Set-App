@@ -62,7 +62,7 @@ def main_page():
         st.image(picture)
         
     #./solve_set.py [filename] --display
-    ./solve_set.py [picture] --display
+    solve_set.py [picture] --display
 
 
 def page2():
