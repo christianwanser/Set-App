@@ -453,49 +453,84 @@ def process_video(
     cv2.destroyAllWindows()
 
 
-if __name__ == "__main__":
+def solveit(input_image):
     # get starting time
-    start_time = time.time()
+#    start_time = time.time()
+#
+#    parser = argparse.ArgumentParser(description="Annotate sets on a video of cards")
+#    parser.add_argument(
+#        "--video",
+#        type=str,
+#        help="The path to the input video file",
+#    )
+#    parser.add_argument(
+#        "--image",
+#        type=str,
+#        help="The path to the input image file",
+#    )
+#    parser.add_argument(
+#        "-o",
+#        type=str,
+#        help="The path to the output video file",
+#        default="./output.avi",
+#    )
+#    parser.add_argument(
+#        "--display",
+#        action="store_true",
+#        help="Whether to display the annotated frames",
+#    )
+#    args = parser.parse_args()
 
-    parser = argparse.ArgumentParser(description="Annotate sets on a video of cards")
-    parser.add_argument(
-        "--video",
-        type=str,
-        help="The path to the input video file",
-    )
-    parser.add_argument(
-        "--image",
-        type=str,
-        help="The path to the input image file",
-    )
-    parser.add_argument(
-        "-o",
-        type=str,
-        help="The path to the output video file",
-        default="./output.avi",
-    )
-    parser.add_argument(
-        "--display",
-        action="store_true",
-        help="Whether to display the annotated frames",
-    )
-    args = parser.parse_args()
+    img = cv2.imread(args.image)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    annotated_img = annotate_sets_on_frame(img, debug=True)
+    plt.imshow(annotated_img)
+    plt.show()
 
-    if args.image:
-        img = cv2.imread(args.image)
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        annotated_img = annotate_sets_on_frame(img, debug=True)
-        plt.imshow(annotated_img)
-        plt.show()
-    else:
-        process_video(
-            args.video,
-            args.o,
-            disp_frames=args.display,
-        )
 
-    # ending time
-    end_time = time.time()
-
-    # print how long it took to run
-    print(f"It took {end_time - start_time} seconds to run")
+#if __name__ == "__main__":
+#    # get starting time
+#    start_time = time.time()
+#
+#    parser = argparse.ArgumentParser(description="Annotate sets on a video of cards")
+#    parser.add_argument(
+#        "--video",
+#        type=str,
+#        help="The path to the input video file",
+#    )
+#    parser.add_argument(
+#        "--image",
+#        type=str,
+#        help="The path to the input image file",
+#    )
+#    parser.add_argument(
+#        "-o",
+#        type=str,
+#        help="The path to the output video file",
+#        default="./output.avi",
+#    )
+#    parser.add_argument(
+#        "--display",
+#        action="store_true",
+#        help="Whether to display the annotated frames",
+#    )
+#    args = parser.parse_args()
+#
+#    if args.image:
+#        img = cv2.imread(args.image)
+#        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+#        annotated_img = annotate_sets_on_frame(img, debug=True)
+#        plt.imshow(annotated_img)
+#        plt.show()
+#    else:
+#        process_video(
+#            args.video,
+#            args.o,
+#            disp_frames=args.display,
+#        )
+#
+#    # ending time
+#    end_time = time.time()
+#
+#    # print how long it took to run
+#    print(f"It took {end_time - start_time} seconds to run")

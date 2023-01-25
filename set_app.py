@@ -2,7 +2,7 @@ import os
 
 #import openpyxl
 
-import solver_final as sf
+from solver_final import *
 
 import streamlit as st
 
@@ -63,6 +63,8 @@ def main_page():
 
     if input_image:
         st.image(input_image)
+        
+    solveit(input_image)
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
 
@@ -72,7 +74,7 @@ def main_page():
 
 #    sf --image "/Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png"
 
-    python solver_final.py --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
+#    python solver_final.py --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
 
 #    sf --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
 
