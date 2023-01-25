@@ -8,6 +8,8 @@ import streamlit as st
 
 from PIL import Image
 
+from numpy import np
+
 #import pandas as pd
 #import numpy as np
 #from st_aggrid import AgGrid
@@ -74,7 +76,7 @@ def main_page():
         image = Image.open(input_image)
         st.image(image)
         img_array = np.asarray(image)
-        np.interp(img_array, (img_array.min(), img_array.max()), (0, +1))
+        img_array = np.interp(img_array, (img_array.min(), img_array.max()), (0, +1))
         cv2.imwrite(os.path.abspath("images/current_image.png"), img_array)
         
     
