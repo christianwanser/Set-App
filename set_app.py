@@ -60,8 +60,13 @@ def main_page():
 #    st.markdown("**Track your post performance** over time by analyzing engagements, impressions, and the percent engagement per impression.")
 #    st.markdown("**Click** on any data point and **you're brought to that post's link!**")
 
+    test = True
 
-    input_image = st.camera_input("Take a picture")
+    if test:
+        # use test image for testing
+        input_image = os.path.abspath("images/img_1.png")
+    else:
+        input_image = st.camera_input("Take a picture")
 
     if input_image:
         st.image(input_image)
@@ -71,11 +76,7 @@ def main_page():
         cv2.imwrite(os.path.abspath("images/current_image.png"), img_array)
         
     
-    test = True
-    
     if test:
-        # use test image for testing
-        input_image = os.path.abspath("images/img_1.png")
         if input_image:
             st.image(solveit(os.path.abspath("images/current_image.png")))
     else:
