@@ -1,0 +1,45 @@
+Format: (Sets identified correctly), (Incorrect sets identified), (Num correct sets unique to that solver)
+Their data set (set-solver/image-data/set-games):
+(https://github.com/nicolashahn/set-solver/tree/master/image-data/set-games)
+0:
+    Mine:   0,0,0
+    Theirs: 2,0,2
+1:
+    Mine:   0,0,0
+    Theirs: 0,0,0
+2:
+    Mine:   5,0,1
+    Theirs: 4,2,0
+3:
+    Mine:   5,0,2
+    Theirs: 3,6,0
+4:
+    Mine:   2,1,0
+    Theirs: 2,1,0
+5:
+    Mine:   0,2,0
+    Theirs: 0,1,0
+6:
+    Mine:   0,0,0
+    Theirs: 0,1,0
+7:
+    Mine:   0,0,0
+    Theirs: 0,0,0
+8:
+    Mine:   2,2,2
+    Theirs: 1,0,1
+9:
+    Mine:   0,0,0
+    Theirs: 0,1,0
+10:
+    Mine:   1,0,1
+    Theirs: 0,3,0
+11:
+    Mine:   1,0,1
+    Theirs: 0,1,0
+12:
+    Mine:   5,0,3
+    Theirs: 2,1,0
+13:
+    Mine:   5,0,2
+    Theirs: 3,2,0

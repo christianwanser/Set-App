@@ -1,0 +1,4 @@
+Number of times spent to fully analyze each video.
+3: 2751.919443130493
+2: 3455.4039199352264
+1: 2945.326821088791
