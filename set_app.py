@@ -71,7 +71,7 @@ def main_page():
         input_image = st.camera_input("Take a picture")
 
     if input_image:
-        st.image(input_image)
+#        st.image(input_image)
         
         image = Image.open(input_image)
         st.image(image)
