@@ -69,7 +69,7 @@ def main_page():
 #    input_image = os.path.abspath("images/img_1.png")
        
     if input_image:
-        st.image(solveit(os.path.abspath("images/current_image")))
+        st.image(solveit(uploaded_file.getvalue(os.path.abspath("images/current_image"))))
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
 
