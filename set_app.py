@@ -6,6 +6,8 @@ from solver_final import *
 
 import streamlit as st
 
+from PIL import Image
+
 #import pandas as pd
 #import numpy as np
 #from st_aggrid import AgGrid
@@ -63,7 +65,9 @@ def main_page():
 
     if input_image:
         st.image(input_image)
-        cv2.imwrite(os.path.abspath("images/current_image"), input_image)
+        image = Image.open(input_image)
+        img_array = np.array(image)
+        cv2.imwrite(os.path.abspath("images/current_image"), img_array)
         
     # use test image for testing
 #    input_image = os.path.abspath("images/img_1.png")
