@@ -70,7 +70,9 @@ def main_page():
 
 #    sf.image(input_image)
 
-    sf --image "/Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png"
+#    sf --image "/Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png"
+
+    $ python solver_final.py --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
 
 #    sf --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
 
