@@ -76,13 +76,14 @@ def main_page():
         image = Image.open(input_image)
         st.image(image)
         img_array = np.asarray(image)
-        img_array = np.interp(img_array, (img_array.min(), img_array.max()), (0, +1)) * 255
+#        img_array = np.interp(img_array, (img_array.min(), img_array.max()), (0, +1)) * 255
         cv2.imwrite(os.path.abspath("images/current_image.png"), img_array)
         
     
     if test:
         if input_image:
-            st.image(os.path.abspath("images/current_image.png"))
+            img = cv2.cvtColor(os.path.abspath("images/current_image.png"), cv2.COLOR_BGR2RGB)
+            st.image(img)
             st.image(solveit(os.path.abspath("images/current_image.png")))
     else:
         if input_image:
