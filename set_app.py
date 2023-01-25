@@ -78,9 +78,11 @@ def main_page():
     
     if test:
         if input_image:
+            st.image(os.path.abspath("images/current_image.png"))
             st.image(solveit(os.path.abspath("images/current_image.png")))
     else:
         if input_image:
+            st.image(os.path.abspath("images/current_image.png"))
             st.image(solveit(os.path.abspath("images/current_image.png")))
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
