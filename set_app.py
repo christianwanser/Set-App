@@ -65,9 +65,10 @@ def main_page():
         st.image(input_image)
         
     # use test image for testing
-    input_image = os.path.abspath("images/img_1.png")
-        
-    st.image(solveit(input_image))
+#    input_image = os.path.abspath("images/img_1.png")
+       
+    if input_image:
+        st.image(solveit(input_image))
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
 
