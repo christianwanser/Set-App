@@ -2,6 +2,8 @@ import os
 
 #import openpyxl
 
+import solver_final
+
 import streamlit as st
 
 #import pandas as pd
