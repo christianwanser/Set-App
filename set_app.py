@@ -68,7 +68,9 @@ def main_page():
 
 #    solver_final.py --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
 
-    sf --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
+    sf.image(input_image)
+
+#    sf --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
 
 #    sf --image os.path.abspath("images/img_1.png")
 
