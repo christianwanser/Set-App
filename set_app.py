@@ -67,7 +67,7 @@ def main_page():
         st.image(input_image)
         image = Image.open(input_image)
         img_array = np.array(image)
-        cv2.imwrite(os.path.abspath("images/current_image"), img_array)
+        cv2.imwrite(os.path.abspath("images/current_image.png"), img_array)
         
     # use test image for testing
 #    input_image = os.path.abspath("images/img_1.png")
