@@ -65,15 +65,22 @@ def main_page():
 
     if input_image:
         st.image(input_image)
+        
         image = Image.open(input_image)
         img_array = np.array(image)
         cv2.imwrite(os.path.abspath("images/current_image.png"), img_array)
         
-    # use test image for testing
-#    input_image = os.path.abspath("images/img_1.png")
-       
-    if input_image:
-        st.image(solveit(os.path.abspath("images/current_image.png")))
+    
+    test = True
+    
+    if test:
+        # use test image for testing
+        input_image = os.path.abspath("images/img_1.png")
+        if input_image:
+            st.image(solveit(os.path.abspath("images/current_image.png")))
+    else:
+        if input_image:
+            st.image(solveit(os.path.abspath("images/current_image.png")))
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
 
