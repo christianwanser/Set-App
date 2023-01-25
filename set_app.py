@@ -70,7 +70,9 @@ def main_page():
 
 #    sf --image /Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png
 
-    sf --image input_image
+    sf --image os.path.abspath("images/img_1.png")
+
+#    sf --image input_image
 
 #    sf.image("/Users/christianwanser/Desktop/PlayingWithData/SetApp/Set-App/images/img_1.png")
 
