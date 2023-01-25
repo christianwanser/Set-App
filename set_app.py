@@ -62,8 +62,9 @@ def main_page():
     if input_image:
         st.image(input_image)
 
-    solver_final.py --image os.path.abspath("images/img_1.png")
+#    solver_final.py --image os.path.abspath("images/img_1.png")
 
+    solver_final.py --image path/to/img.jpg
 
 def page2():
 
