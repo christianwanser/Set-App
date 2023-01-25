@@ -64,7 +64,7 @@ def main_page():
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
 
-    solver_final.py --image /Users/christianwanser/Desktop/Playing with Data/Set App/Set-App/images/img_1.png
+    solver_final.py --image "/Users/christianwanser/Desktop/Playing with Data/Set App/Set-App/images/img_1.png"
 
 def page2():
 
