@@ -74,17 +74,18 @@ def main_page():
         image = Image.open(input_image)
         st.image(image)
         img_array = np.asarray(image)
-        cv2.imwrite(os.path.abspath("images/current_image.jpg"), img_array)
+        np.interp(img_array, (img_array.min(), img_array.max()), (0, +1))
+        cv2.imwrite(os.path.abspath("images/current_image.png"), img_array)
         
     
     if test:
         if input_image:
-            st.image(os.path.abspath("images/current_image.jpg"))
-            st.image(solveit(os.path.abspath("images/current_image.jpg")))
+            st.image(os.path.abspath("images/current_image.png"))
+            st.image(solveit(os.path.abspath("images/current_image.png")))
     else:
         if input_image:
-            st.image(os.path.abspath("images/current_image.jpg"))
-            st.image(solveit(os.path.abspath("images/current_image.jpg")))
+            st.image(os.path.abspath("images/current_image.png"))
+            st.image(solveit(os.path.abspath("images/current_image.png")))
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
 
