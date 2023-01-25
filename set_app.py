@@ -63,7 +63,7 @@ def main_page():
 
     if input_image:
         st.image(input_image)
-        cv2.imwrite(os.path.abspath("images/current_image"), uploaded_file.getvalue(input_image))
+        cv2.imwrite(os.path.abspath("images/current_image"), st.uploaded_file.getvalue(input_image))
         
     # use test image for testing
 #    input_image = os.path.abspath("images/img_1.png")
