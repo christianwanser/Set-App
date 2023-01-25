@@ -481,11 +481,12 @@ def solveit(input_image):
 #    )
 #    args = parser.parse_args()
 
-    img = cv2.imread(input_image)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    annotated_img = annotate_sets_on_frame(img, debug=True)
-    plt.imshow(annotated_img)
-    plt.show()
+    if input_image:
+        img = cv2.imread(input_image)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        annotated_img = annotate_sets_on_frame(img, debug=True)
+        plt.imshow(annotated_img)
+        plt.show()
 
 
 #if __name__ == "__main__":
