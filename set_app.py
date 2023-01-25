@@ -80,7 +80,7 @@ def main_page():
     if test:
         if input_image:
             st.image(os.path.abspath("images/current_image.jpg"))
-            st.image(solveit(os.path.abspath("images/current_image.png")))
+            st.image(solveit(os.path.abspath("images/current_image.jpg")))
     else:
         if input_image:
             st.image(os.path.abspath("images/current_image.jpg"))
