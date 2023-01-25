@@ -84,7 +84,10 @@ def main_page():
         if input_image:
 #            img = cv2.cvtColor(os.path.abspath("images/current_image.png"), cv2.COLOR_BGR2RGB)
 #            st.image(img)
-            st.image(os.path.abspath("images/current_image.png"))
+            img = cv2.imread(os.path.abspath("images/current_image.png"))
+            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            st.image(img)
+#            st.image(os.path.abspath("images/current_image.png"))
             st.image(solveit(os.path.abspath("images/current_image.png")))
     else:
         if input_image:
