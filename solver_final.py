@@ -382,17 +382,41 @@ def annotate_sets_on_frame(input_frame, debug=False):
             # text = f"{card_color}"
             # text = f"{i} {card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
 #            text = f"{card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
-            nl = '\n'
-            text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
-            cv2.putText(
-                output_img,
-                text,
-                (box[0, 0][0], box[0, 0][1]),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                min(width, height) * FONT_SCALE,
-                (255, 255, 0),
-                2,
-            )
+            for prop in props:
+                p = 0
+                y0 = box[0, 0][1])
+                dy = y0 * 0.1
+                y = y0 + p * dy
+#                text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
+                if prop = "card_color":
+                    text = f"{card_color}"
+                elif prop = num_shapes:
+                    text = f"{num_shapes}"
+                elif prop = shape_name:
+                    text = f"{shape_name[0:4]}"
+                elif prop = fill:
+                    text = f"{fill[0:4]}"
+                cv2.putText(
+                    output_img,
+                    text,
+                    (box[0, 0][0], y,
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    min(width, height) * FONT_SCALE,
+                    (255, 255, 0),
+                    2,
+                )
+                
+                p += 1
+#            text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
+#            cv2.putText(
+#                output_img,
+#                text,
+#                (box[0, 0][0], box[0, 0][1]),
+#                cv2.FONT_HERSHEY_SIMPLEX,
+#                min(width, height) * FONT_SCALE,
+#                (255, 255, 0),
+#                2,
+#            )
 
     # annotate the sets
     set_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (0, 255, 255)]
