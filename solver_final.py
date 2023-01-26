@@ -385,7 +385,8 @@ def annotate_sets_on_frame(input_frame, debug=False):
             for n in range(0,4):
                 p = 0
                 y0 = box[0, 0][1]
-                dy = y0 * 0.1
+#                dy = y0 * 0.1
+                dy = 4
                 y = y0 + p * dy
 #                text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
                 if n == 0:
