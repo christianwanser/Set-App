@@ -346,7 +346,7 @@ def solve_sets(card_props):
     return sets
 
 
-def annotate_sets_on_frame(input_frame, debug=False, show_props=False):
+def annotate_sets_on_frame(input_frame, debug=False):
     # Driver for the entire set detection pipeline.
     # Get the cards
     cards, boxes = get_cards(input_frame)
@@ -367,9 +367,6 @@ def annotate_sets_on_frame(input_frame, debug=False, show_props=False):
 
     # draw the sets on the frame
     output_img = input_frame.copy()
-    
-    if show_props:
-        print(card_props)
 
     if debug:
         # draw boxes around each card
@@ -399,8 +396,8 @@ def annotate_sets_on_frame(input_frame, debug=False, show_props=False):
             box = boxes[j]
             box += (10 * i, 10 * i)
             cv2.drawContours(output_img, [box], -1, set_colors[i], 10)
-
-    return output_img
+            
+    return (output_img,card_props)
 
 
 def process_video(
@@ -434,7 +431,7 @@ def process_video(
 
         try:
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            annotated_frame = annotate_sets_on_frame(frame, debug=True,show_props=True)
+            (annotated_frame,card_props) = annotate_sets_on_frame(frame, debug=True)
             annotated_frame = cv2.cvtColor(annotated_frame, cv2.COLOR_RGB2BGR)
 
             if disp_frames:
@@ -487,9 +484,9 @@ def solveit(input_image):
     if input_image:
         img = cv2.imread(input_image)
 #        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        annotated_img = annotate_sets_on_frame(img, debug=True,show_props=True)
-#        annotated_img = annotate_sets_on_frame(img, debug=False,show_props=False)
-        return annotated_img
+        (annotated_img,card_props) = annotate_sets_on_frame(img, debug=True)
+#        annotated_img = annotate_sets_on_frame(img, debug=False)
+        return (annotated_img,card_props)
 #        plt.imshow(annotated_img)
 #        plt.show()
 
