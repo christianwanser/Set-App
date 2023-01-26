@@ -90,7 +90,7 @@ def main_page():
             st.write("Image 3")
             st.image(img)
 #            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+#            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
             st.write("Image 4")
             st.image(img)
 #            st.image(os.path.abspath("images/current_image.png"))
