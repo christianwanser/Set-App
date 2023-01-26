@@ -62,7 +62,7 @@ def main_page():
 #    st.markdown("**Track your post performance** over time by analyzing engagements, impressions, and the percent engagement per impression.")
 #    st.markdown("**Click** on any data point and **you're brought to that post's link!**")
 
-    test = True
+    test = False
 
     if test:
         # use test image for testing
@@ -98,8 +98,18 @@ def main_page():
             st.image(solveit(os.path.abspath("images/current_image.png")))
     else:
         if input_image:
-            st.image(os.path.abspath("images/current_image.png"))
+            img = cv2.imread(os.path.abspath("images/current_image.png"))
+            st.write("Image 3")
+            st.image(img)
+#            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+#            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+            st.write("Image 4")
+            st.image(img)
+#            st.image(os.path.abspath("images/current_image.png"))
+            st.write("Image 5")
             st.image(solveit(os.path.abspath("images/current_image.png")))
+#            st.image(os.path.abspath("images/current_image.png"))
+#            st.image(solveit(os.path.abspath("images/current_image.png")))
 
 #    solver_final.py --image os.path.abspath("images/img_1.png")
 
