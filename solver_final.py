@@ -388,13 +388,13 @@ def annotate_sets_on_frame(input_frame, debug=False):
                 dy = y0 * 0.1
                 y = y0 + p * dy
 #                text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
-                if n = 0:
+                if n == 0:
                     text = f"{card_color}"
-                elif n = 1:
+                elif n == 1:
                     text = f"{num_shapes}"
-                elif n = 2:
+                elif n == 2:
                     text = f"{shape_name[0:4]}"
-                elif n = 3:
+                elif n == 3:
                     text = f"{fill[0:4]}"
                 cv2.putText(
                     output_img,
