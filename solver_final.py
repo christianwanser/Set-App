@@ -483,7 +483,7 @@ def solveit(input_image):
 
     if input_image:
         img = cv2.imread(input_image)
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+#        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         annotated_img = annotate_sets_on_frame(img, debug=True)
         return annotated_img
 #        plt.imshow(annotated_img)
