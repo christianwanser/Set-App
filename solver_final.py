@@ -373,7 +373,7 @@ def annotate_sets_on_frame(input_frame, debug=False):
         # output_img = cv2.drawContours(output_img, boxes, -1, (255, 0, 255), 5)
 
         height,width,_ = input_frame.shape
-        FONT_SCALE = 2e-4
+        FONT_SCALE = 3e-4
 
         # write the card properties
         for i, props in enumerate(card_props):
@@ -383,7 +383,7 @@ def annotate_sets_on_frame(input_frame, debug=False):
             # text = f"{i} {card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
 #            text = f"{card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
             nl = '\n'
-            text = f"{card_color}{nl}{num_shapes}{nl}{shape_name[0:4]}{nl}{fill[0:4]}"
+            text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
             cv2.putText(
                 output_img,
                 text,
