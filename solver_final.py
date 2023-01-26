@@ -399,7 +399,7 @@ def annotate_sets_on_frame(input_frame, debug=False):
                 cv2.putText(
                     output_img,
                     text,
-                    (box[0, 0][0], y,
+                    (box[0, 0][0], y),
                     cv2.FONT_HERSHEY_SIMPLEX,
                     min(width, height) * FONT_SCALE,
                     (255, 255, 0),
