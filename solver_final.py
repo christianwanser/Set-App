@@ -373,7 +373,7 @@ def annotate_sets_on_frame(input_frame, debug=False):
         # output_img = cv2.drawContours(output_img, boxes, -1, (255, 0, 255), 5)
 
         height,width,_ = input_frame.shape
-        FONT_SCALE = 2e-3
+        FONT_SCALE = 2e-4
 
         # write the card properties
         for i, props in enumerate(card_props):
