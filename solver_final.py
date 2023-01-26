@@ -372,6 +372,9 @@ def annotate_sets_on_frame(input_frame, debug=False):
         # draw boxes around each card
         # output_img = cv2.drawContours(output_img, boxes, -1, (255, 0, 255), 5)
 
+        height,width,_ = input_frame.shape
+        FONTSCALE = 2e-3
+
         # write the card properties
         for i, props in enumerate(card_props):
             (card_color, num_shapes, shape_name, fill) = props
@@ -384,7 +387,7 @@ def annotate_sets_on_frame(input_frame, debug=False):
                 text,
                 (box[0, 0][0], box[0, 0][1]),
                 cv2.FONT_HERSHEY_SIMPLEX,
-                min(imageWidth,imageHeight)/(25/scale),
+                min(width, height) * FONT_SCALE,
                 (255, 255, 0),
                 2,
             )
