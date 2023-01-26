@@ -62,7 +62,7 @@ def main_page():
 #    st.markdown("**Track your post performance** over time by analyzing engagements, impressions, and the percent engagement per impression.")
 #    st.markdown("**Click** on any data point and **you're brought to that post's link!**")
 
-    test = False
+    test = True
 
     if test:
         # use test image for testing
@@ -95,7 +95,10 @@ def main_page():
             st.image(img)
 #            st.image(os.path.abspath("images/current_image.png"))
             st.write("Image 5")
-            st.image(solveit(os.path.abspath("images/current_image.png")))
+#            st.image(solveit(os.path.abspath("images/current_image.png")))
+            (output_image,card_props) = solveit(os.path.abspath("images/current_image.png"))
+            st.image(output_image)
+            st.write(card_props)
     else:
         if input_image:
 #            img = cv2.imread(os.path.abspath("images/current_image.png"))
