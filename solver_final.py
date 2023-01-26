@@ -382,7 +382,8 @@ def annotate_sets_on_frame(input_frame, debug=False):
             # text = f"{card_color}"
             # text = f"{i} {card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
 #            text = f"{card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
-            text = f"{card_color}\n{num_shapes}\n{shape_name[0:4]}\n{fill[0:4]}"
+            nl = '\n'
+            text = f"{card_color}{nl}{num_shapes}{nl}{shape_name[0:4]}{nl}{fill[0:4]}"
             cv2.putText(
                 output_img,
                 text,
