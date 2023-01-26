@@ -112,7 +112,9 @@ def main_page():
 #            st.write("Image 5")
             (output_image,card_props) = solveit(os.path.abspath("images/current_image.png"))
             st.image(output_image)
-            st.write(card_props)
+#            st.write(card_props)
+            
+            
 #            st.image(os.path.abspath("images/current_image.png"))
 #            st.image(solveit(os.path.abspath("images/current_image.png")))
 
