@@ -382,20 +382,20 @@ def annotate_sets_on_frame(input_frame, debug=False):
             # text = f"{card_color}"
             # text = f"{i} {card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
 #            text = f"{card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
-            for prop in props:
+            for n in range(0,4):
                 p = 0
                 y0 = box[0, 0][1]
                 dy = y0 * 0.1
                 y = y0 + p * dy
-                text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
-#                if prop = "card_color":
-#                    text = f"{card_color}"
-#                elif prop = num_shapes:
-#                    text = f"{num_shapes}"
-#                elif prop = shape_name:
-#                    text = f"{shape_name[0:4]}"
-#                elif prop = fill:
-#                    text = f"{fill[0:4]}"
+#                text = f"{card_color}{num_shapes}{shape_name[0:4]}{fill[0:4]}"
+                if n = 0:
+                    text = f"{card_color}"
+                elif n = 1:
+                    text = f"{num_shapes}"
+                elif n = 2:
+                    text = f"{shape_name[0:4]}"
+                elif n = 3:
+                    text = f"{fill[0:4]}"
                 cv2.putText(
                     output_img,
                     text,
