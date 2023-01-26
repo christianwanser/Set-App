@@ -383,23 +383,23 @@ def annotate_sets_on_frame(input_frame, debug=False):
             # text = f"{i} {card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
 #            text = f"{card_color} {num_shapes} {shape_name[0:4]} {fill[0:4]}"
   
-        for n, p in enumerate(props):
-            
-            y0 = box[0, 0][1]
-#            dy = round(box[1, 0][1] * 0.5)
-            dy = 50
-            y = y0 + n * dy
-            
-            text = f"{p}"
-            cv2.putText(
-                output_img,
-                text,
-                (box[0, 0][0], y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                min(width, height) * FONT_SCALE,
-                (255, 255, 0),
-                2,
-            )
+            for n, p in enumerate(props):
+                
+                y0 = box[0, 0][1]
+    #            dy = round(box[1, 0][1] * 0.5)
+                dy = 50
+                y = y0 + n * dy
+                
+                text = f"{p}"
+                cv2.putText(
+                    output_img,
+                    text,
+                    (box[0, 0][0], y),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    min(width, height) * FONT_SCALE,
+                    (255, 255, 0),
+                    2,
+                )
             
 #            for n in range(0,4):
 #                p = 0
