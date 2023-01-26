@@ -98,7 +98,7 @@ def main_page():
 #            st.image(solveit(os.path.abspath("images/current_image.png")))
             (output_image,card_props) = solveit(os.path.abspath("images/current_image.png"))
             st.image(output_image)
-            st.write(card_props)
+#            st.write(card_props)
     else:
         if input_image:
 #            img = cv2.imread(os.path.abspath("images/current_image.png"))
