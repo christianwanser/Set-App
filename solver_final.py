@@ -384,7 +384,7 @@ def annotate_sets_on_frame(input_frame, debug=False):
                 text,
                 (box[0, 0][0], box[0, 0][1]),
                 cv2.FONT_HERSHEY_SIMPLEX,
-                1,
+                min(imageWidth,imageHeight)/(25/scale),
                 (255, 255, 0),
                 2,
             )
