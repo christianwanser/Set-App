@@ -71,9 +71,11 @@ def main_page():
         input_image = st.camera_input("Take a picture")
 
     if input_image:
+        st.write("Image 1")
         st.image(input_image)
         
         image = Image.open(input_image)
+        st.write("Image 2")
         st.image(image)
         img_array = np.asarray(image)
 #        img_array = np.interp(img_array, (img_array.min(), img_array.max()), (0, +1)) * 255
@@ -85,10 +87,14 @@ def main_page():
 #            img = cv2.cvtColor(os.path.abspath("images/current_image.png"), cv2.COLOR_BGR2RGB)
 #            st.image(img)
             img = cv2.imread(os.path.abspath("images/current_image.png"))
+            st.write("Image 3")
+            st.image(img)
 #            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+            st.write("Image 4")
             st.image(img)
 #            st.image(os.path.abspath("images/current_image.png"))
+            st.write("Image 5")
             st.image(solveit(os.path.abspath("images/current_image.png")))
     else:
         if input_image:
