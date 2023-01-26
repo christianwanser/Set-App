@@ -108,8 +108,8 @@ def main_page():
 #            st.image(os.path.abspath("images/current_image.png"))
 #            st.write("Image 5")
             st.image(solveit(os.path.abspath("images/current_image.png")))
-            
-            annotated_img = annotate_sets_on_frame(os.path.abspath("images/current_image.png"), debug=True,show_props=True)
+            img = cv2.imread(os.path.abspath("images/current_image.png"))
+            annotated_img = annotate_sets_on_frame(img, debug=True,show_props=True)
 #            st.image(os.path.abspath("images/current_image.png"))
 #            st.image(solveit(os.path.abspath("images/current_image.png")))
 
